@@ -8,3 +8,19 @@
 
 
 ### Notes from tutorial
+4 parts
+* Beginner
+* Intermediate
+* Advanced 
+* Mastery
+#### Command Line info
+
+1. `System.out.println`
+    * Class.member.method 
+      * (System class defined within Java.lang package)
+      * (Out is a field member)
+
+#### What happened when we Run main.main
+2 steps involved 
+1. Compilation
+2. Executions
