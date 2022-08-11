@@ -34,6 +34,7 @@
 
 #### Types
 1. Primitive
+Basic types (8 of them)
    1. byte [1 byte] (range -128,127)
    2. short [2 byte] (range -32K,32K)
    3. int [4 byte] (range -2B,2B)
@@ -50,4 +51,92 @@
 ``char letter = 'A'`` single character = single quotes / string = double quotes
 
 
-2. Reference
+2. Reference  
+   * Used for storing complex objects eg. date, mail msgs.  
+   * Date is a reference type
+   * **We must allocate memory**
+`Date now = new Date();`
+   * Object is an instance of a class
+   * `now.getTime()` is a method of Date class 
+(primative types dont have that)
+
+##### Primative vs Reference Types
+**Memory management**
+* Using primative types, variables are non dependant
+* Reference variables only point to a specific location in memory
+* Primative types are the value of the location in memory
+
+
+## Strings
+We don't have to use 
+
+      String msg = new String("hello world");
+but instead can use, as a java shortcut
+
+      String msg = "hello world";
+
+* Can concatenate strings using +
+* Can use methods on strings 
+  1. "indexOf"
+  2. endsWith
+  3. toLowerCase(toUpperCase)
+  4. trim
+  5. replace (does not modify strings)
+
+Use \ to prefix java syntax in a string
+
+## Arrays
+```int[] numbers = new int[5]```
+* 5 specifies the size of array
+* first element is numbers[0]
+* Printing array gives you the string generated in the memory location  
+#### to print array
+System.out.println(Arrays.toString(numbers));
+
+can also instantiate using `int[] numbers = {1,2,3,4,5}`
+* `numbers.length` is the length of array. They have a fixed length once created
+* `numbers.sort` sorts the array
+
+We can create 2D/3D arrays ``int [][] numbers = new int [2][3];``
+* To print multi dimensional strings `Arrays.deepToString()`
+* We can also create using
+        
+        int[] [] numbers = {{1,2,3},{4,5,6}}
+
+## Constants
+Variables that we do not want to change during their lifetime
+        
+        final float PI = 3.14F
+
+* final sets it as a constant
+* Should use caps
+
+## Arithmetic Expressions 
+We can use increment
+
+``x++;`` = ``++x``
+
+        int y = x++
+        y = x
+        x +1
+If we have ++ after x it copies first then increments
+
+        int y ++x
+        x+1
+        y= x
+
+
+* x +=2 (/=, *=, -=)
+
+## Casting
+* **Implicit casting** Happens when the cast goes from small to big, this is fine 
+    * can only happen between compatible types
+  
+``Integer.parseInt()`` takes string and returns an int
+
+## Math Class
+
+
+
+# Important Notes
+1. sout is shorthand for print out to term
