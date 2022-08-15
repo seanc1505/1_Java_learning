@@ -135,8 +135,86 @@ If we have ++ after x it copies first then increments
 ``Integer.parseInt()`` takes string and returns an int
 
 ## Math Class
+`int result = Math.round(1.1F);`
+* Sets result to the rounded result within brackets
+* `ceil` is the ceiling of the value inside brackets
+* `int result = (int)Math.ceil(1.1F);` (int) casts the value to integer 
+
+## Number formatting
+
+NumberFormat is abstract, can't be created using an instance.
+
+~~`NumberFormat currency = new NumberFormat()`~~
+```
+NumberFormat currency = NumberFormat.getCurrencyInstance()
+currency.format(1234567.897);
+```
+* Can also use getPercentInstance
+
+We can define the object and call the function in the one line using dot operator
+`NumberFormat.getCurrencyInstance().format(0.234)`
+
+## Reading input
+
+`Scanner scanner = new Scanner(System.in)`
+
+System.in is a field in system class
+variable defined in a class
+
+scanner.nextByte();
+
+scanner.next();
+    returns a string
+    reads one token only, a token is reflected by the space or tab
+
+scanner.nextLine()
+this takes the whole line
+
+## Logical operators
+
+Use of **and**, **or** and **not** variables in snippet below;
+
+        boolean tooHot = false;
+        boolean tooSunny = true;
+        boolean isNice = !tooHot && !tooSunny;
+        boolean needJacket = tooHot || tooSunny;
+
+Implementation of **If statements**
+        
+        if(temp>40){
+        System.out.println("Hot");
+        } else if (temp<20){
+        System.out.println("Cold");
+        } else{
+            System.out.println("nice");
+            boolean tooHot = false
+        }
+
+Scope of tooHot is only available within else block
+**Instantiate variable in main block**.
+**easiest way to implement the value of a var**
+`boolean hasHighIncome = (income > 100_000);`
+### Ternary Operator
+
+        String className = income > 10 ? "first" : "Economy"; 
+        Var = <Logical exp> ? <if true> : <if false>;
+Question mark and colon is ternary operator
 
 
+## Switch case
+
+    switch(role) {
+    case "admin":
+        sout("admin");
+        break
+    case "moderator":
+        sout("moderator");
+        break;
+    default:
+        sout("guest");
+    }
 
 # Important Notes
 1. sout is shorthand for print out to term
+2. Within intelliJ we can change vars using Shift+F6 to rename var everywhere, also suggests names for var
+3. 
