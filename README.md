@@ -214,6 +214,41 @@ Question mark and colon is ternary operator
         sout("guest");
     }
 
+### For loops syntax
+For (int i=0;I<5;I++){
+}
+
+### While loops
+while (I>0)
+{}
+
+Inequality operator does not work for strings.
+
+Strings are references, only compares the address of the reference var
+
+``!String.equals()``
+
+
+### Do while
+Executes at least once
+
+        Do{
+
+        }While(I>1);
+
+* **Break** comes out of loop
+* **Continue** moves to beginning of loop again
+
+### For each
+Limited to stepping through forward only
+We dont have access to index either 
+
+    Strings [] fruits = {"apple","orange","pear"};
+
+    For (string fruit:fruits)
+     Sout (fruit);
+
+
 # Important Notes
 1. sout is shorthand for print out to term
 2. Within intelliJ we can change vars using Shift+F6 to rename var everywhere, also suggests names for var
