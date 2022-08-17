@@ -1,12 +1,25 @@
 # 1_Java_learning
  Exploring Java
 
+## To investigate 
+* [ ] Try catch blocks
+* [ ] Investigate throws IOException
+* [ ] Investigate this [entire section](#investigation-of-for-each-using-lambda-and-injection)
+
 ## Tutorial 1
 * Based off the tutorial from [**Programming with Mosh**](https://www.youtube.com/watch?v=eIrMbAQSU34)
 * Started on 27/07/2022
 * Hoping for 1 hour of coding per day
 
 
+## Tutorial 2
+* Based off the tutorial from Linkedin Learning, [**Learning Java**](https://www.linkedin.com/learning/learning-java-4/welcome-to-learning-java)
+* Started on 16/08/2022
+
+
+## Tutorial 3
+* Based off the tutorial from Linkedin Learning, [**Learning Java Applications**](https://www.linkedin.com/learning/learning-java-applications-2019)
+* Started on 17/08/2022
 ### Notes from tutorial
 4 parts
 * Beginner
@@ -31,6 +44,8 @@
 2. Apply name of var
 3. initialise the value
 4. camelCase is used for var naming
+
+* If type is obvious, can use `var` which will perform an auto assignment of the variable. In general not a good method.
 
 #### Types
 1. Primitive
@@ -279,6 +294,8 @@ and it will run the function
         * May/may not take inputs
         * Returns an instance of the class
 
+* **Public** makes a property/method available to other classes
+* **Private** does not allow access to methods outside class
 
 Constructor
 
@@ -316,12 +333,55 @@ Defining a class
         }
     }
 
+### Tutorial 3
+* Create the class using new class
+
 ## Static vs non-static vars
 * Values of non-static variables change between instances 
     * different triangles have different heights
 * Values of static variables are constant within a class
   * Implemented using `static int numSides=3;`
 
+## Reading from a txt file
+
+    Path file = FileSystems.getDefault().getPath(file path,file name);
+
+
+## List 
+similar to an array 
+    
+    List<String>
+
+
+## Lambdas
+
+    lines.forEach((str)->System.out.println(str));
+
+## Investigation of for each using lambda and injection
+
+		for (int i =0; i<lines.size();i++) {
+			System.out.println(lines.get(i));
+		}
+		
+		lines.forEach((str)->System.out.println(str));
+		
+        
+        lines.forEach(System.out::println);
+
+## Handling errors from java
+* Add ``throws IOException`` to main
+  * If there is an error inside this method. Object calling method must handle the error
+  * Main method should not throw an exception
+* handling in main uses the try/catch
+
+
+        try {
+                loadFile("files.txt");
+        } catch (IOException e) {
+                // TODO Auto-generated catch block
+			//e.printStackTrace();
+			System.out.println(e);
+            }
 
 # Important Notes
 1. sout is shorthand for print out to term
@@ -330,3 +390,8 @@ Defining a class
    * Non-static
 4. `math.pow()` is a class method, it does not require a math object to be created
    * Static
+5. If Eclipse thinks that a line might throw an error;
+   * Method must throw an error or
+   * surround the code with a try/catch block 
+
+
