@@ -8,6 +8,9 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
+    public static void testFunctionTeaTime(){
+
+    }
     public static void main(String[] args) {
 //        byte age =30;
 //        long viewsCount = 3_123_456_789L;

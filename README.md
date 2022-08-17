@@ -248,8 +248,85 @@ We dont have access to index either
     For (string fruit:fruits)
      Sout (fruit);
 
+## Functions
+We write outside the main function. Syntax for declaring;
+* We have to define a function before we can use it
+
+
+    public static void calculatePrice(double meal, double tipRate, dobule taxRate){
+       }
+
+* public static **void**
+  * Void returns nothing
+  * Double returns a double
+
+
+    public static void calculatePrice(double meal, double tipRate, dobule taxRate){
+        return result
+    }
+
+### Calling the function
+Just insert the code ``double ret_val = testFunctionTeaTime(cheese, 21,12);`` 
+and it will run the function
+
+
+## Classes
+
+* **static** is used for a function within a class where it does not
+  depend on class attributes but relates to theme of class
+* We have to define a class before we can use it
+    * A constructor is how we create and initialize an object of a class
+        * May/may not take inputs
+        * Returns an instance of the class
+
+
+Constructor
+
+    public Trianlge(double base, double height,
+                    double side1,double side2,
+                    double side3){
+    this.base = base;
+    ...
+    this.side3 = side3;
+    }
+
+To instantiate a new object from a class
+    
+    Triangle triangleA = new Triangle(15,7,15,8,17)
+
+Defining a class
+
+    public class Triangle {
+    double base;
+    double height;
+    double length1;
+    double length2;
+    double length3;
+
+    public Trianlge(double base, double height,
+                    double length1,double length2,
+                    double length3){
+        this.base = base;
+        ...
+        this.length3 = side3;
+        }
+    
+    public double findArea(){
+        return (this.base*this.height)/2; 
+        }
+    }
+
+## Static vs non-static vars
+* Values of non-static variables change between instances 
+    * different triangles have different heights
+* Values of static variables are constant within a class
+  * Implemented using `static int numSides=3;`
+
 
 # Important Notes
 1. sout is shorthand for print out to term
 2. Within intelliJ we can change vars using Shift+F6 to rename var everywhere, also suggests names for var
-3. 
+3. An instance method, requires an instance of the class to use the function. 
+   * Non-static
+4. `math.pow()` is a class method, it does not require a math object to be created
+   * Static
