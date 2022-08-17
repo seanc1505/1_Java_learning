@@ -26,6 +26,8 @@ replay_pid*
 .idea/
 /.metadata/
 
+test_java_project/.gitignore
+
 .project
 .settings/
 .classpath
