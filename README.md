@@ -383,6 +383,54 @@ similar to an array
 			System.out.println(e);
             }
 
+
+## User interfaces using Swing
+1. Using the Eclipse IDE, Help>InstallNewSoftware>window builder url
+2. Create a new java project
+3. Create application class
+    * Creates a template 
+    * Design tab, opens a visual UI for layout of apps. Creating things in design view auto creates code
+   * Default layout is border layout
+     * Organises NSEW+center layout
+     * Takes up whole screen until another component is added
+4.  Double clicking within UI brings you to code location of component
+
+### Swing Layouts
+1. Grid
+2. Border (default)
+3. Form
+4. Absolute layout
+    * full control of position
+
+
+### Event Handlers
+To add an event around a component
+1. Right click, add event handler>action>action performed
+
+### Radio buttons, check boxes
+Radio buttons, only one at a time
+check boxes, multiple can be selected
+
+To put radio buttons into a group.
+1. Select them all
+2. right click them
+3. choose setButtonGroup
+4. NewStandard
+
+To handle radio event
+1. Need to create a class that handles all
+2. implements ActionListener
+3. overrides action performed 
+4. create instance of it 
+		``RadioListener listener = new RadioListener();``
+5. add action listener to all items 
+   
+### creating components at run time
+Adding/removing components requires revalidation and repainting of content window
+`frame.revalidate();`
+
+
+
 # Important Notes
 1. sout is shorthand for print out to term
 2. Within intelliJ we can change vars using Shift+F6 to rename var everywhere, also suggests names for var
