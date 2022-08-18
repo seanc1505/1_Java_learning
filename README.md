@@ -5,6 +5,7 @@
 * [ ] Try catch blocks
 * [ ] Investigate throws IOException
 * [ ] Investigate this [entire section](#investigation-of-for-each-using-lambda-and-injection)
+* [ ] Investigate this [entire section](#embed-a-file-into-a-jar)
 
 ## Tutorial 1
 * Based off the tutorial from [**Programming with Mosh**](https://www.youtube.com/watch?v=eIrMbAQSU34)
@@ -437,7 +438,25 @@ Adding/removing components requires revalidation and repainting of content windo
             class TableData extends AbstractTableModel {
 	    	}
     
-    
+## Exporting java projects
+export as runnable JAR file
+set name
+save and test it!
+
+## To connect classes between projects
+exporting
+1. export as JAR file
+2. export desired package
+   1. choose specific classes
+   2. choose exactly what to export
+   3. choose where to export
+To pull in class
+Project2>Properties>javabuildpath>libraries>classpath>addexternaljars
+### Embed a file into a jar
+    InputStream input = Tables.class.getResourcesAsStream(fileName);
+    ImputStreamReader reader = new      InputStreamREader(input);
+    BufferedReader buffer = new Buffered Reader(reader);
+    list<String> lines =buffer.lines()colllect(Collectors.tolist());
 
 
 # Important Notes

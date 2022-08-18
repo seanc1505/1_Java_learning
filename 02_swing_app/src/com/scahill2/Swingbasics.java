@@ -93,7 +93,7 @@ public class Swingbasics {
 		frame.getContentPane().add(btnTextChanged);
 		btnTextChanged.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				lblempty.setText("Hi"+textField.getText());
+				lblempty.setText("Hi "+textField.getText());
 			}
 		});
 		
