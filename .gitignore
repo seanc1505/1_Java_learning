@@ -31,3 +31,5 @@ replay_pid*
 .project
 .settings/
 .classpath
+
+*.csv
