@@ -434,7 +434,6 @@ Adding/removing components requires revalidation and repainting of content windo
 2. Can use `model` section of table properties to pull in data
    1. Tutorial created using code
 
-
             class TableData extends AbstractTableModel {
 	    	}
     

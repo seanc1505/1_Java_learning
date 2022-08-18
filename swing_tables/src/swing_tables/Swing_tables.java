@@ -14,6 +14,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.JTable;
 import javax.swing.border.BevelBorder;
+import javax.swing.JScrollPane;
 
 public class Swing_tables extends JFrame {
 
@@ -38,7 +39,7 @@ public class Swing_tables extends JFrame {
 	
 	class TableData extends AbstractTableModel {
 
-		int[][] allData = new int[3][3];
+		int[][] allData;
 		private static final long serialVersionUID = -3121818866196017932L;
 		
 		public TableData() {
@@ -58,6 +59,9 @@ public class Swing_tables extends JFrame {
 				for (int i=0;i<lines.size();i++) {
 					String line = lines.get(i);
 					String[] lineArray = line.split(",");
+					if (allData==null) {
+						allData = new int[lines.size()][lineArray.length];
+					}
 					for (int j=0;j<lineArray.length;j++) {
 						int parsedInt = Integer.parseInt(lineArray[j]);
 						allData[i][j] = parsedInt;
@@ -98,10 +102,13 @@ public class Swing_tables extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(37, 36, 346, 217);
+		contentPane.add(scrollPane);
+		
 		table = new JTable();
+		scrollPane.setViewportView(table);
 		table.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		table.setBounds(37, 36, 346, 217);
-		contentPane.add(table);
 		
 		TableData data = new TableData();
 		table.setModel(data);
