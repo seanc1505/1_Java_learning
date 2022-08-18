@@ -425,10 +425,20 @@ To handle radio event
 		``RadioListener listener = new RadioListener();``
 5. add action listener to all items 
    
-### creating components at run time
+### Creating components at run time
 Adding/removing components requires revalidation and repainting of content window
-`frame.revalidate();`
+`frame.revalidate();` `frame.repaint();`
 
+## Tables
+1. Table creation in design window
+2. Can use `model` section of table properties to pull in data
+   1. Tutorial created using code
+
+
+            class TableData extends AbstractTableModel {
+	    	}
+    
+    
 
 
 # Important Notes

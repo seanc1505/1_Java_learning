@@ -158,7 +158,7 @@ public class Swingbasics {
 			public void actionPerformed(ActionEvent e) {
 				frame.getContentPane().remove(lblCreate);
 				frame.validate();
-				frame.repaint();
+				frame.repaint();  
 			}
 		});
 		btndeletelabel.setBounds(10, 236, 104, 21);
