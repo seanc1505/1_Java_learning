@@ -459,6 +459,23 @@ Project2>Properties>javabuildpath>libraries>classpath>addexternaljars
     list<String> lines =buffer.lines()colllect(Collectors.tolist());
 
 
+### Server side Java
+
+1. Install Eclipse IDE for Enterprise Java Developers
+2. Download Apache Tomcat
+   1. save in useful location
+3. Create a Maven Project
+4. keep defaults
+5. select `Group ID -> org.apache.maven.archetypes` `Artifact ID -> maven archtype web app`
+6. add to the pom.xml dependencies tag
+
+        <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>3.1.0</version>
+        </dependency>
+
+
 # Important Notes
 1. sout is shorthand for print out to term
 2. Within intelliJ we can change vars using Shift+F6 to rename var everywhere, also suggests names for var
