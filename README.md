@@ -474,6 +474,18 @@ Project2>Properties>javabuildpath>libraries>classpath>addexternaljars
         <artifactId>javax.servlet-api</artifactId>
         <version>3.1.0</version>
         </dependency>
+7. Press run, manual server
+8. Apache tomcat version
+9. point to apache tomcat
+10. will open in chrome
+
+#### To add java code to jsp file
+
+            <%String message = "Hello from Java!";%>
+            <h2><%=message %></h2> 
+
+## Android development --> Ardoid studio
+1. Installed android studio and started a basic android app in an emulator
 
 
 # Important Notes

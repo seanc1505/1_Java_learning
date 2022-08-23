@@ -33,3 +33,11 @@ replay_pid*
 .classpath
 
 *.csv
+
+cache/
+resources/
+dist/
+plugins/
+WEB-INF/
+bootstrap/
+themes/
